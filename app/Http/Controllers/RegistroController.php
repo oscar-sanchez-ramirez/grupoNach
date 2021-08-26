@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Area;
@@ -32,7 +33,8 @@ class RegistroController extends Controller
         );
     }
 
-    public function store(Request $request)
+    //Crear registro
+    public function store(CreateUserRequest $request)
     {
         $input = $request->all();
 
@@ -42,6 +44,7 @@ class RegistroController extends Controller
             'message' => 'Registro creado correctamente'
         ], 201);
     }
+    
 
     // Get mostrar registro unico
     public function show($id)
@@ -49,7 +52,15 @@ class RegistroController extends Controller
         return User::find($id);
     }
 
-    public function destroy(){
-        
+    // Borrar registro
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return response()->json([
+            'res' => true,
+            'message' => 'Registro eliminado correctamente'
+        ], 200);
     }
 }
