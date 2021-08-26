@@ -64,3 +64,8 @@ class RegistroController extends Controller
         ], 200);
     }
 }
+
+
+// victor reyes jimenez12:19
+// vreyes@gruponach.com
+// CC njimenez@gruponach.com

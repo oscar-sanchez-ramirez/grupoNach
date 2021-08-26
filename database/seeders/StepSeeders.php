@@ -17,7 +17,7 @@ class StepSeeders extends Seeder
     {
         DB::table('steps')->insert([
             [
-                'autor' => 'Jose Antonio T.R',
+                'autor' => 'Jose Antonio Editado',
                 'imagenTitulo' => 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg',
                 'imagenUsuario' => 'https://i.pinimg.com/236x/c7/53/0c/c7530c67000fdbf27b00ba59c9282e39.jpg',
                 'descripcion' => 'Contratación paso a paso para tu mejor entrevista',
